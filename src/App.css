@@ -1,0 +1,76 @@
+.main{
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+  gap:40px
+}
+#shifra{
+  height: 50%;
+}
+span {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid rgba(34, 221, 231, 0.8); /* blinking cursor */
+  font-size: 2vmax;
+  font-weight: 600;
+  background: linear-gradient(to right, rgb(34, 221, 231), rgb(237, 4, 125));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: typing 4s steps(40, end) forwards, blinkCursor 0.7s step-end infinite;
+}
+
+/* Typing effect */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 40%; }
+}
+
+/* Cursor blink */
+@keyframes blinkCursor {
+  0%, 100% { border-color: transparent; }
+  50% { border-color: rgba(34, 221, 231, 0.8); }
+}
+
+button{
+  width: 180px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:20px;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 20px;
+  border: none;
+  background-color: rgb(79, 224, 234);
+  box-shadow: 2px 2px 50px rgb(79, 224, 234);
+  cursor: pointer;
+}
+#speak{
+  width: 100px;
+}
+p{
+  font-size: 1.3vmax;
+  color:white;
+text-align: center;
+padding: 0px 40px;
+}
+.response{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap:10px
+
+}
+#aigif{
+  width: 50vh;
+  height: 100px;
+}
