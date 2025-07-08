@@ -35,17 +35,17 @@ function UserContext({ children }) {
   async function aiResponse(prompt) {
     try {
       const text = await run(prompt);
-     let newText = text.replace(/google/gi, "Suvidha Patil");
+     let newText = text.replace(/google/gi, "Suvidha");
 
     // Step 2: Replace full intro sentence (from Gemini) if present
     newText = newText.replace(
-      /I am (a|an)? (.*?model.*?) trained by Suvidha Patil\.?/i,
-      "I am Yug, your virtual assistant trained by Suvidha Patil."
+      /I am (a|an)? (.*?model.*?) trained by Suvidha \.?/i,
+      "I am Yug, your virtual assistant trained by Suvidha."
     );
 
     // Optional: Add fallback check for similar variations
     if (/large language model/i.test(newText)) {
-      newText = "I am Yug, your virtual assistant trained by Suvidha Patil.";
+      newText = "I am Yug, your virtual assistant trained by Suvidha.";
     }   setPrompt(newText);
       speak(newText);
       setResponse(true);
